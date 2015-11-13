@@ -7,7 +7,7 @@ include /usr/share/dpkg/default.mk
 export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
 %:
-	dh $@ 
+	dh $@ --with=python2
 
 # dh_make generated override targets
 # This is example for Cmake (See https://bugs.debian.org/641051 )
