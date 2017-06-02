@@ -1,0 +1,22 @@
+Source: duo-openvpn
+Section: libs
+Priority: extra
+Maintainer: Marcin Kulisz (kuLa) <marcin@bashton.com>
+Build-Depends: debhelper (>= 9),
+ dh-python,
+ python-all,
+ python-setuptools
+Standards-Version: 3.9.6
+Homepage: https://github.com/duosecurity/duo_openvpn
+Vcs-Git: https://github.com/glassesdirect/duo_openvpn.git
+Vcs-Browser: https://github.com/glassesdirect/duo_openvpn/tree/debian
+
+Package: duo-openvpn
+Architecture: any
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+ ${python:Depends},
+ openvpn
+Description: Duo Security two-factor authentication plugin for OpenVPN
+ This package provides the plugin for OpenVpn needed to interact with the Duo
+ Security for handling out-of-band two-factor authentication.

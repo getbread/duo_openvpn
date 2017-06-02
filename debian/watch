@@ -1,0 +1,4 @@
+version=3
+
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/duo_openvpn-$1\.tar\.gz/ \
+  https://github.com/duosecurity/duo_openvpn/tags .*/v?(\d\S*)\.tar\.gz
