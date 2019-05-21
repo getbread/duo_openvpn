@@ -369,6 +369,10 @@ def main(Client=Client, environ=os.environ):
         log('required environment variables not found')
         sys.exit(1)
 
+    if password and password.lower() == 'sms':
+        log('sms programmatically prohibited')
+        failure(control)
+
     def get_config(k):
         v = environ.get(k)
         if v:
